@@ -1,6 +1,6 @@
 """
 FastAPI Churn Scoring Service
-D2C Customer Churn Intelligence Capstone — Part 4
+D2C Customer Churn Intelligence Capstone: Part 4
 
 Loads the trained model (model.pkl from Part 3) and exposes endpoints for the
 internal CRM tool to score customer churn risk.
@@ -60,7 +60,7 @@ MarketingConsent = Literal["Yes", "No"]
 
 class CustomerFeatures(BaseModel):
     """One customer's feature payload, matching the rfm_modeling_snapshot.csv schema
-    (excluding customer_id, snapshot_date, churn_next_60d, and split — none of which are
+    (excluding customer_id, snapshot_date, churn_next_60d, and split, none of which are
     model inputs)."""
 
     customer_id: str = Field(..., description="Customer identifier, echoed back in the response only")
